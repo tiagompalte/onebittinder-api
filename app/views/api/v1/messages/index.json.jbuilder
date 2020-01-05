@@ -17,6 +17,5 @@ json.chats @matches.each do |match|
     json.body       msg.body
     json.avatar     polymorphic_url(msg.user.default_photo.file) if msg.user&.default_photo&.file.attached?
     json.me         msg.user == current_user
-    json.color      msg.user == current_user ? 'green' : 'blue'
   end
 end
